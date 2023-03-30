@@ -1,0 +1,199 @@
+/* -------------------- */
+/* custom properties    */
+/* -------------------- */
+
+:root {
+  /* colors */
+  --clr-primary-400: hsl(240, 38%, 20%);
+  --clr-primary-300: hsl(240, 18%, 77%);
+ 
+  --clr-natural-200: hsl(0, 0%, 95%);
+  --clr-natural-100: hsl(0, 0%, 100%);
+
+  /* font sizes */
+  --fs-300:	.9375rem;
+  --fs-400:	1.125rem;
+  --fs-500:	1.25rem;
+  --fs-600:	2rem;
+
+  /* font family */
+  --ff-sans: 'Inter', sans-serif;
+
+}
+
+/* -------------------- */
+/* Reset                */
+/* -------------------- */
+
+/* box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* margin reset */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+/* set up body */
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  font-weight: 300;
+}
+/* set up images */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* set up buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: .5;
+}
+/* -------------------- */
+/* components           */
+/* -------------------- */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  background-image: url(./assets/images/pattern-curve.svg);
+  background-size: 17.8125rem 4.5rem;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 1.5rem 0 4.6873rem;
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+.sec-one {
+  margin-bottom: 2rem;
+}
+.container {
+  position: relative;
+  width: 20.4375rem;
+  height: 19.25rem;
+  background-image: url(./assets/images/pattern-bg.svg);
+  background-size: cover;
+  margin-inline: auto;
+}
+.sec-one__img {
+  width: 15.875rem;
+  height: 15.8125rem;
+  padding-top: 1px;
+  box-shadow: 0 1rem 1rem .1875rem rgba(0, 0, 0, .1);
+}
+.sec-one__btn {
+  position: absolute;
+  width: 5rem;
+  gap: 1rem;
+  bottom: .4375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5rem;
+  padding-block: .813rem;
+  background: var(--clr-natural-100);
+}
+.sec-one__btn--prev,
+.sec-one__btn--next {
+  width: .625rem;
+  height: .75rem;
+}
+
+.sec-two {
+  width: 87.2%;
+  text-align: center;
+  background-image: url(./assets/images/pattern-quotes.svg);
+  background-position: top center;
+  background-size: 3.75rem 3.125rem;
+  background-repeat: no-repeat;
+  padding-top: 1.5625rem;
+  margin-inline: auto;
+}
+.sec-two__text {
+  margin-bottom: 1.1875rem;
+  line-height: 1.5rem;
+}
+.sec-two__name {
+  font-size: var(--fs-300);
+  font-weight: 700;
+  line-height: 20px;
+}
+.sec-two__job {
+  font-size: var(--fs-300);
+  font-weight: 500;
+  color: var(--clr-primary-300);
+  line-height: 1.25rem;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+@media (min-width: 60rem) {
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    background-size: 38.125rem 9.625rem;
+    padding: 0;
+  }
+  .sec-one {
+    padding: 3.47% 5.07%;
+    margin-bottom: 0;
+  }
+  .container {
+    /* outline: 1px solid lime; */
+    width: 43.5625rem;
+    height: 41.0625rem;
+  }
+  .sec-one__img {
+    width: 33.75rem;
+    height: 33.75rem;
+    padding-top: .4rem;
+  }
+  .sec-one__btn {
+    width: 7rem;
+    gap: 1rem;
+    bottom: 2rem;
+    left: 12.5rem;
+    padding-block: 1.188rem;
+  }
+  .sec-one__btn--prev,
+  .sec-one__btn--next {
+    width: .75rem;
+    height: 1rem;
+  }
+
+  .sec-two {
+    position: absolute;
+    top: 214px;
+    left: 12.25%;
+    width: 39.6875rem;
+    text-align: left;
+    background-image: url(./assets/images/pattern-quotes.svg);
+    background-position: top left 5.95rem;
+    background-size: 7.5rem 6.25rem;
+    padding-top: 4rem;
+  }
+  .sec-two__text {
+    font-size: var(--fs-600);
+    line-height: 2.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .sec-two__name,
+  .sec-two__job {
+    display: inline-block;
+    font-size: 1.25rem;
+  }
+  .sec-two__name {
+    padding-right: .5rem;
+  }
+}
